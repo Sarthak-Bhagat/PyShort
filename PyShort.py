@@ -13,10 +13,11 @@ def shorten():
 		root.clipboard_clear()
 		root.clipboard_append(shortened_url)
 		root.update()	
-		messagebox.showinfo(title='Success', message="Shortened URL copied to your clipboard")	
+		messagebox.showinfo(title='Success', message="Shortened URL copied to your clipboard")
+		root.destroy()	
 
 	else:
-		print("[!] Error Shortening URL:", data)
+		messagebox.showerror(title='Error', message="[!] Error Shortening URL:")
 
 root = Tk()
 root.title("PyShort")
